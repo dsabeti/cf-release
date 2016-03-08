@@ -904,6 +904,10 @@ properties:
     port: 80
     secure_link:
       secret: blobstore-secret
+    tls:
+      port: 443
+      cert: BLOBSTORE_TLS_CERT
+      private_key: BLOBSTORE_PRIVATE_KEY
   cc:
     allow_app_ssh_access: true
     allowed_cors_domains: []
@@ -923,7 +927,7 @@ properties:
       fog_connection: null
       webdav_config:
         password: blobstore-password
-        private_endpoint: http://blobstore.service.cf.internal
+        private_endpoint: https://blobstore.service.cf.internal
         public_endpoint: http://blobstore.DOMAIN
         username: blobstore-username
     bulk_api_password: BULK_API_PASSWORD
@@ -969,7 +973,7 @@ properties:
       max_staged_droplets_stored: null
       webdav_config:
         password: blobstore-password
-        private_endpoint: http://blobstore.service.cf.internal
+        private_endpoint: https://blobstore.service.cf.internal
         public_endpoint: http://blobstore.DOMAIN
         username: blobstore-username
     external_host: api
@@ -1038,7 +1042,7 @@ properties:
       max_valid_packages_stored: null
       webdav_config:
         password: blobstore-password
-        private_endpoint: http://blobstore.service.cf.internal
+        private_endpoint: https://blobstore.service.cf.internal
         public_endpoint: http://blobstore.DOMAIN
         username: blobstore-username
     quota_definitions:
@@ -1055,7 +1059,7 @@ properties:
       resource_directory_key: DOMAIN-cc-resources
       webdav_config:
         password: blobstore-password
-        private_endpoint: http://blobstore.service.cf.internal
+        private_endpoint: https://blobstore.service.cf.internal
         public_endpoint: http://blobstore.DOMAIN
         username: blobstore-username
     security_group_definitions:
@@ -1115,7 +1119,7 @@ properties:
     users_can_select_backend: true
     webdav_config:
       password: blobstore-password
-      private_endpoint: http://blobstore.service.cf.internal
+      private_endpoint: https://blobstore.service.cf.internal
       public_endpoint: http://blobstore.DOMAIN
       username: blobstore-username
   ccdb:

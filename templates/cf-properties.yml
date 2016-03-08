@@ -306,8 +306,6 @@ properties:
 
     ssl:
       port: -1
-    sslCertificate: ~
-    sslPrivateKey: ~
 
     sslCertificate: ~
     sslPrivateKey: ~ 
