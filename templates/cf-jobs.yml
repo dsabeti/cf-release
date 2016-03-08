@@ -88,6 +88,8 @@ meta:
   dea_templates:
   - name: consul_agent
     release: (( meta.consul_templates.consul_agent.release ))
+  - name: rootfses
+    release: (( meta.release.name ))
   - name: dea_next
     release: (( meta.release.name ))
   - name: dea_logging_agent

@@ -35,6 +35,9 @@ properties:
     memory_mb: (( merge || nil ))
     disk_mb: (( merge || nil ))
 
+  rootfs_cflinuxfs2:
+    trusted_certs: (( property_overrides.rootfs_cflinuxfs2.trusted_certs || nil ))
+
   loggregator_endpoint:
     shared_secret: loggregator-secret
 
