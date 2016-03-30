@@ -13,6 +13,17 @@ packages:
   - common
   - postgres-9.4.6
 
+provides:
+- name: conn
+  type: db
+  properties:
+  - databases.db_scheme
+  - databases.port
+  - databases.address
+  - databases.roles
+  - databases.databases
+  - databases.max_connections
+
 properties:
   databases.db_scheme:
     description: "The database scheme"
