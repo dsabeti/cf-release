@@ -21,10 +21,23 @@
 %>
 ---
 message_bus_servers:
-<% p('nats.machines').each do |ip| %>
-    - host: <%= ip %>:<%= p('nats.port') %>
-      user: <%= p('nats.user') %>
-      password: <%= p('nats.password') %>
+<%
+  nats_config = nil
+  if_link("nats") do |nats|
+    nats_config = {}
+    nats_config["machines"] = nats.p("nats.machines")
+    nats_config["user"] = nats.p("nats.user")
+    nats_config["password"] = nats.p("nats.password")
+    nats_config["port"] = nats.p("nats.port")
+  end
+
+  nats_config = p("nats") unless nats_config
+%>
+
+<% nats_config['machines'].each do |ip| %>
+    - host: <%= ip %>:<%= nats_config['port'] %>
+      user: <%= nats_config['user'] %>
+      password: <%= nats_config['password'] %>
 <% end %>
 
 routes: <%= p('route_registrar.routes').to_json %>

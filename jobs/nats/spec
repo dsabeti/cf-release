@@ -11,6 +11,19 @@ packages:
   - common
   - gnatsd
 
+provides:
+- name: nats
+  type: nats
+  properties:
+  - nats.machines
+  - nats.port
+  - nats.user
+  - nats.password
+  - nats.debug
+  - nats.monitor_port
+  - nats.prof_port
+  - nats.trace
+
 properties:
   nats.user:
     description: "Username for server authentication."

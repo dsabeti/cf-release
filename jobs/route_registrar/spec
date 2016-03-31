@@ -7,6 +7,10 @@ packages:
 - common
 - route_registrar
 
+consumes:
+  - name: nats
+    type: nats
+
 templates:
   route_registrar_ctl.erb: bin/route_registrar_ctl
   registrar_settings.yml.erb: config/registrar_settings.yml
