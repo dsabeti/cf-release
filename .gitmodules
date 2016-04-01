@@ -15,7 +15,7 @@
 	url = https://github.com/cloudfoundry/cf-smoke-tests
 [submodule "src/etcd-release"]
 	path = src/etcd-release
-	url = https://github.com/cloudfoundry-incubator/etcd-release.git
+	url = https://github.com/DennisDenuto/etcd-release.git
 [submodule "src/github.com/cloudfoundry/cf-acceptance-tests"]
 	path = src/github.com/cloudfoundry/cf-acceptance-tests
 	url = https://github.com/cloudfoundry/cf-acceptance-tests
