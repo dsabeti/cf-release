@@ -9,7 +9,7 @@
 	url = https://github.com/apcera/gnatsd.git
 [submodule "src/loggregator"]
 	path = src/loggregator
-	url = https://github.com/cloudfoundry/loggregator
+	url = https://github.com/APShirley/loggregator
 [submodule "src/smoke-tests"]
 	path = src/smoke-tests
 	url = https://github.com/cloudfoundry/cf-smoke-tests
