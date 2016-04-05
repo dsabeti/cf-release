@@ -9,31 +9,31 @@
 	url = https://github.com/apcera/gnatsd.git
 [submodule "src/loggregator"]
 	path = src/loggregator
-	url = https://github.com/APShirley/loggregator
+	url = https://github.com/dsabeti/loggregator
 [submodule "src/smoke-tests"]
 	path = src/smoke-tests
 	url = https://github.com/cloudfoundry/cf-smoke-tests
 [submodule "src/etcd-release"]
 	path = src/etcd-release
-	url = https://github.com/DennisDenuto/etcd-release.git
+	url = https://github.com/dsabeti/etcd-release.git
 [submodule "src/github.com/cloudfoundry/cf-acceptance-tests"]
 	path = src/github.com/cloudfoundry/cf-acceptance-tests
 	url = https://github.com/cloudfoundry/cf-acceptance-tests
 [submodule "src/consul-release"]
 	path = src/consul-release
-	url = https://github.com/cloudfoundry-incubator/consul-release.git
+	url = https://github.com/dsabeti/consul-release.git
 [submodule "src/uaa-release"]
 	path = src/uaa-release
-	url = https://github.com/DennisDenuto/uaa-release
+	url = https://github.com/dsabeti/uaa-release
 [submodule "src/github.com/cloudfoundry-incubator/route-registrar"]
 	path = src/github.com/cloudfoundry-incubator/route-registrar
 	url = https://github.com/cloudfoundry-incubator/route-registrar
 [submodule "src/dea-hm-workspace"]
 	path = src/dea-hm-workspace
-	url = https://github.com/DennisDenuto/dea-hm-workspace
+	url = https://github.com/dsabeti/dea-hm-workspace
 [submodule "src/buildpacks"]
 	path = src/buildpacks
-	url = https://github.com/cloudfoundry/buildpack-releases
+	url = https://github.com/dsabeti/buildpack-releases
 [submodule "src/capi-release"]
 	path = src/capi-release
-	url = https://github.com/APShirley/capi-release
+	url = https://github.com/dsabeti/capi-release
