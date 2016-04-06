@@ -10,22 +10,12 @@ status:
 
 nats:
 <%
-  nats_config = nil
-  if_link("nats") do |nats|
-    nats_config = {}
-    nats_config["machines"] = nats.p("nats.machines")
-    nats_config["user"] = nats.p("nats.user")
-    nats_config["password"] = nats.p("nats.password")
-    nats_config["port"] = nats.p("nats.port")
-  end
-
-  nats_config = p("nats") unless nats_config
-%>
-<% nats_config["machines"].each do |address| %>
-  - host: <%= address %>
-    port: <%= nats_config["port"] %>
-    user: <%= nats_config["user"] %>
-    pass: "<%= nats_config["password"] %>"
+  nats = link("nats")
+  nats.instances.map do |instance| %>
+  - host: <%= instance.address %>
+    port: <%= nats.p("nats.port") %>
+    user: <%= nats.p("nats.user") %>
+    pass: "<%= nats.p("nats.password") %>"
 <% end %>
 
 logging:

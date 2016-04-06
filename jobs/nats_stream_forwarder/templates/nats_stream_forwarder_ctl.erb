@@ -42,9 +42,10 @@ case $1 in
 
 
     <% my_ip = discover_external_ip %>
-    <% connect_ip = p("nats.machines").include?(my_ip) ? my_ip : p("nats.machines").sample %>
+    <% nats = link("nats") %>
+    <% connect_ip = nats.instances.map(&:address).include?(my_ip) ? my_ip : nats.instances.sample.address %>
 
-    exec chpst -u vcap:vcap bundle exec $BIN_DIR/nats_stream_forwarder.rb 'nats://<%= p("nats.user") %>:<%= p("nats.password") %>@<%= connect_ip %>:<%= p("nats.port") %>'
+    exec chpst -u vcap:vcap bundle exec $BIN_DIR/nats_stream_forwarder.rb 'nats://<%= nats.p("nats.user") %>:<%= nats.p("nats.password") %>@<%= connect_ip %>:<%= nats.p("nats.port") %>'
 
     ;;
 

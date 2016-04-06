@@ -102,14 +102,6 @@ properties:
     description: "Log level for router"
     default: "info"
 
-  nats.user:
-    description:
-  nats.password:
-    description:
-  nats.port:
-    description:
-  nats.machines:
-    description: "IP of each NATS cluster member."
   router.offset:
     description:
     default: 0

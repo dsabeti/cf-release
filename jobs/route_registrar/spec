@@ -16,21 +16,6 @@ templates:
   registrar_settings.yml.erb: config/registrar_settings.yml
 
 properties:
-  nats.machines:
-    description: IPs of each NATS cluster member
-    example: |
-      - 192.168.50.123
-      - 192.168.52.123
-  nats.port:
-    description: TCP port of NATS servers
-    example: 4222
-  nats.user:
-    description: User name for NATS authentication
-    example: nats
-  nats.password:
-    description: Password for NATS authentication
-    example: natSpa55w0rd
-
   route_registrar.routes:
     description: |
       * Array of hashes determining which routes will be registered.

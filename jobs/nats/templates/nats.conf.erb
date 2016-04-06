@@ -54,7 +54,7 @@ cluster {
   }
 
   routes = [
-    <% (p("nats.machines") - [self_ip] - [self_host]).each do |address| %>
+    <% (link("nats").instances.map(&:address) - [self_ip] - [self_host]).each do |address| %>
     nats-route://<%= p("nats.user") %>:<%= p("nats.password") %>@<%= address %>:<%= p("nats.port") + 1 %>
     <% end %>
   ]
