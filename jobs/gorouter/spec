@@ -1,6 +1,10 @@
 ---
 name: gorouter
 
+provides:
+  - name: gorouter
+    type: gorouter
+
 consumes:
 - name: nats
   type: nats
